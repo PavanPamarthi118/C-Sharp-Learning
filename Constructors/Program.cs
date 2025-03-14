@@ -6,7 +6,7 @@
 
 //------------------------------------Constructor--------------------------------------// (https://www.youtube.com/watch?v=Fo_SED11gME)
 
-//It's a special method present under a class responsible for initializing the variab;es of that class
+//It's a special method present under a class responsible for initializing the variables of that class
 //The name of a constructor is exactly same as the name of the class in which that constructor is present
 //A constructor does not have a return type (not even void).
 class Person
