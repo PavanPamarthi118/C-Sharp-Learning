@@ -26,7 +26,7 @@ OOP makes it possible to create full reusable applications with less code and sh
 
 //An object is an instance of a class.It holds actual data and interacts with methods. 
 
-/*
+
 public class car
 {
     // Fields (Attributes)
@@ -55,7 +55,6 @@ public class Program
     }
 }
 
-*/
 
 
 //  Fields vs. Properties 
@@ -63,7 +62,6 @@ public class Program
 //Example Fields  ----> public string name; ----> ✅ Use Fields if the variable is private and only used internally.
 //Example Properties  ----> public string Name { get; set; } ----> ✅ Use Properties when exposing data outside the class (encapsulation, validation, computed values).
 
-/*
  
 class Car
 {
@@ -95,7 +93,6 @@ class Program
     }
 }
 
-*/
 
 
 //------------------------------------ Encapsulation – Hiding Data Using Properties ------------------------------------//
@@ -104,7 +101,6 @@ class Program
 //🔹 It protects data from unauthorized access.
 //🔹 Uses private fields and public properties (get/set methods).
 
-/*
 class Person
 {
     private string name;  // Private field (cannot be accessed directly)
@@ -134,7 +130,6 @@ class Program
         p.Name = "";  // Invalid, will show "Name cannot be empty!"
     }
 }
-*/
 
 
 //------------------------------------ Abstraction – Hiding Complexity, Showing Only Essentials ------------------------------------//
@@ -143,7 +138,6 @@ class Program
 //🔹 Uses abstract classes and interfaces.
 //🔹 Helps in reducing complexity by exposing only essential features.
 
-/*
 
 // Abstract class
 abstract class Vehicle
@@ -168,8 +162,6 @@ class Program
         myCar.Start();  // Output: Car starts with a key.
     }
 }
-*/
-
 
 
 //------------------------------------ Inheritance – Reusing Code from Parent Classes ------------------------------------//
@@ -178,7 +170,7 @@ class Program
 //🔹 The child class inherits from the parent class.
 //🔹 Promotes code reusability and reduces redundancy.
 
-/*
+
 
 // Parent class
 class Animal
@@ -207,7 +199,6 @@ class Program
         myDog.Bark(); // Output: The dog barks.
     }
 }
-*/
 
 
 
@@ -217,7 +208,7 @@ class Program
 //🔹 Achieved using Method Overloading (Compile - Time) and Method Overriding (Runtime).
 //🔹 Helps in flexibility and scalability.
 
-/*using System;
+
 
 class Animal
 {
@@ -243,13 +234,12 @@ class Program
         myAnimal.MakeSound();  // Output: Cat meows. (Overridden method)
     }
 }
-*/
+
 
 // --------------------- Method Overloading (Same Class, Different Parameters) -----------------------//
 
 //Method Overloading allows multiple methods with the same name but different parameter lists.
 
-/*using System;
 
 class MathOperations
 {
@@ -283,13 +273,12 @@ class Program
         Console.WriteLine(math.Add(2.5, 3.5));     // Output: 6.0
     }
 }
-*/
+
 
 //---------------------- Method Overriding (Parent-Child Relationship) -------------------------//
 
 //Method Overriding allows a child class to provide a new implementation for a method already defined in a parent class.
 
-/*using System;
 
 // Parent class
 class Animal
@@ -324,11 +313,10 @@ class Program
         myPet.MakeSound();  // Output: Dog barks. (Dynamic Polymorphism)
     }
 }
-*/
+
 
 //----------------------------------------------- 🚀 Real-World Example: OOP in a Banking System  -----------------------------------------------------//
 
-/*using System;
 
 abstract class Account
 {
@@ -339,7 +327,7 @@ abstract class Account
     public abstract void Withdraw(double amount);
 }
 
-// Inheritance & Polymorphism
+ //Inheritance & Polymorphism
 class SavingsAccount : Account
 {
     public override void Deposit(double amount)
@@ -373,9 +361,8 @@ class Program
 }
 
 
-✔ Encapsulation – Balance is protected (private property).
+/* ✔ Encapsulation – Balance is protected (private property).
 ✔ Abstraction – Account defines Deposit() and Withdraw(), hiding internal banking logic.
 ✔ Inheritance – SavingsAccount inherits from Account.
 ✔ Polymorphism – Withdraw() and Deposit() behave differently for different account types.
-
 */
