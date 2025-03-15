@@ -74,7 +74,7 @@ class EmailService : INotificationService
     }
 }
 
-class SMSService :INotificationService
+class SMSService : INotificationService
 {
     public void Send(string message)
     {
@@ -99,7 +99,7 @@ class OrderService //Now our OrderService class is dependent on only the INotifi
     }
 
     // Injecting dependency via property
-    public INotificationService NotificationService { get; set; } 
+    public INotificationService NotificationService { get; set; }
 
     public void ProcessOrder1()
     {
