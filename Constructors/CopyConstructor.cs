@@ -28,7 +28,8 @@ class Program
     static void Main()
     {
         Car car1 = new Car("Audi", 180);
-        Car car2 = new Car(car1); // Copying car1 values into car2
+        Car car2 = car1; // Shallow copy
+        Car car2 = new Car(car1);// Deep copy  // Copying car1 values into car2 
 
         car1.Display();
         car2.Display();
