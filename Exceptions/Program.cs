@@ -2,6 +2,8 @@
 //Console.WriteLine("Hello, World!");
 
 
+using System;
+
 try //The try statement allows you to define a block of code to be tested for errors while it is being executed.
 {
     int[] myNumbers = { 1, 2, 3 };
@@ -31,3 +33,16 @@ static void Main(string[] args)
 {
     checkAge(15);
 }
+
+//The difference between throw; and throw ex; in C# is mainly in how they preserve the original stack trace of an exception
+
+// throw; (Preserves Original Stack Trace ✅)
+
+//Re - throws the same exception while keeping the original stack trace.
+//Best practice when handling exceptions because it retains where the error actually happened.
+
+//throw ex; (Resets Stack Trace ❌)
+
+//Throws a new exception instance.
+//Loses the original stack trace.
+//Not recommended unless you need to wrap the exception in a custom message.

@@ -15,7 +15,7 @@ Examples: ArrayList, Hashtable, Queue, Stack
 
 Found in System.Collections.Generic namespace
 Type-safe (stores a specific type)
-Examples: List<T>, Dictionary<TKey, TValue>, Queue<T>, Stack<T>
+Examples: List<T>, Dictionary<TKey, TValue>, Queue<T>, Stack<T>, HashSet<T>
 */
 
 //--------------------------------------------- Non-Generic Collections ---------------------------------------//
