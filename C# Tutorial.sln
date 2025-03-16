@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generics", "Generics\Generi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegates and Events", "Delegates and Events\Delegates and Events.csproj", "{50A154D7-1D59-4C32-951F-A580860B2B4D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "other key C# concepts", "other key C# concepts\other key C# concepts.csproj", "{A2B08A0D-561C-4C71-9EEB-D07C9368A10C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{50A154D7-1D59-4C32-951F-A580860B2B4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50A154D7-1D59-4C32-951F-A580860B2B4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50A154D7-1D59-4C32-951F-A580860B2B4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2B08A0D-561C-4C71-9EEB-D07C9368A10C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2B08A0D-561C-4C71-9EEB-D07C9368A10C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2B08A0D-561C-4C71-9EEB-D07C9368A10C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2B08A0D-561C-4C71-9EEB-D07C9368A10C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
