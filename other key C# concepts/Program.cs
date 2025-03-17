@@ -50,10 +50,10 @@ class Program3
         {
             string content = File.ReadAllText("data.txt");
             Console.WriteLine($"File Content: {content}");
-        }
 
-        File.WriteAllText("data.txt", "Hello, File Handling!");
-        Console.WriteLine("File written successfully.");
+            File.WriteAllText("data.txt", "Hello, File Handling!");
+            Console.WriteLine("File written successfully.");
+        }
 
     }
 }

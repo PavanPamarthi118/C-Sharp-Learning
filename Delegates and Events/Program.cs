@@ -65,25 +65,25 @@ Why Use Events?
 
 class Button
 {
-    // Step 1: Define a delegate for the event
+    //  Define a delegate for the event
     public delegate void ClickEventHandler();
 
-    // Step 2: Declare an event based on the delegate
+    // Declare an event based on the delegate
     public event ClickEventHandler OnClick;
 
-    // Step 3: Method to simulate button click
+    // Method to simulate button click
     public void Click()
     {
         Console.WriteLine("Button clicked!");
 
-        // Step 4: Raise the event if there are subscribers
+        // Raise the event if there are subscribers
         OnClick?.Invoke();
     }
 }
 
 class Program3
 {
-    // Step 5: Event handler (method that responds to the event)
+    // Event handler (method that responds to the event)
     static void ShowMessage()
     {
         Console.WriteLine("Button was clicked! Performing action...");
@@ -93,7 +93,7 @@ class Program3
     {
         Button btn = new Button();
 
-        // Step 6: Subscribe ShowMessage() to the OnClick event
+        // Subscribe ShowMessage() to the OnClick event
         btn.OnClick += ShowMessage;
 
         // Simulate a button click
