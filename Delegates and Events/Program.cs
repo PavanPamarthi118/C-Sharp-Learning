@@ -54,50 +54,107 @@ class Program2
 //--------------------------------------- Event -----------------------------------------//
 
 /*
-An event is a wrapper around a delegate that provides controlled access to prevent direct method calls.
+An event in C# is a mechanism that enables a class to notify other classes or objects when something happens. 
+It follows the Observer design pattern and is used for implementing publish-subscribe communication between objects.
 
-Why Use Events?
+How Events Works?
 
-✔ Encapsulates delegates (prevents external modification).
-✔ Follows event-driven programming model (e.g., button clicks).
-✔ Used in GUI applications (WinForms, WPF, Blazor, etc.).*/
+Publisher (Event Source): Defines and raises the event.
+Subscriber (Event Listener): Responds to the event by attaching a handler method
+
+Defining an Event
+Events in C# are based on delegates. A delegate is a type that references a method.
+ */
 
 
-class Button
+public class Button
 {
-    //  Define a delegate for the event
-    public delegate void ClickEventHandler();
+    // Define an event using a delegate
+    public event EventHandler Clicked;
 
-    // Declare an event based on the delegate
-    public event ClickEventHandler OnClick;
-
-    // Method to simulate button click
+    // Method to trigger the event
     public void Click()
     {
-        Console.WriteLine("Button clicked!");
-
-        // Raise the event if there are subscribers
-        OnClick?.Invoke();
+        Console.WriteLine("Button Clicked!");
+        Clicked?.Invoke(this, EventArgs.Empty); // Raise the event
     }
 }
 
-class Program3
+public class Program3
 {
-    // Event handler (method that responds to the event)
-    static void ShowMessage()
-    {
-        Console.WriteLine("Button was clicked! Performing action...");
-    }
-
     static void Main()
     {
-        Button btn = new Button();
+        Button button = new Button();
 
-        // Subscribe ShowMessage() to the OnClick event
-        btn.OnClick += ShowMessage;
+        // Subscribe to the event
+        button.Clicked += Button_ClickHandler;
 
-        // Simulate a button click
-        btn.Click();
+        button.Click(); // This will trigger the event
+    }
+
+    // Event handler method
+    static void Button_ClickHandler(object sender, EventArgs e)
+    {
+        Console.WriteLine("Event Handler Executed: Button was clicked!");
     }
 }
 
+/*
+🔹 Explanation:
+
+event EventHandler Clicked; → Declares an event based on EventHandler.
+Click() → Raises the event using Clicked?.Invoke(this, EventArgs.Empty);.
+button.Clicked += Button_ClickHandler; → Subscribes the Button_ClickHandler method to the event.
+When Click() is called, the event is triggered, and the subscribed handler executes.
+ 
+*/
+
+// Custom Event with Delegate
+
+public class Alarm
+{
+    // Define delegate
+    public delegate void AlarmEventHandler(string message);
+
+    // Declare event
+    public event AlarmEventHandler AlarmTriggered;
+
+    public void TriggerAlarm()
+    {
+        if (AlarmTriggered != null)
+        {
+            AlarmTriggered("Warning! Alarm Activated!");
+        }
+    }
+}
+
+public class Program4
+{
+    static void Main()
+    {
+        Alarm alarm = new Alarm();
+        alarm.AlarmTriggered += AlarmHandler; // Subscribe to event
+
+        alarm.TriggerAlarm(); // Raise event
+    }
+
+    static void AlarmHandler(string message)
+    {
+        Console.WriteLine("Received Alert: " + message);
+    }
+}
+
+
+/*
+🔹 Best Practices for Events
+✅ Use EventHandler and EventArgs instead of custom delegates when possible.
+✅ Always check if an event has subscribers before invoking (?.Invoke()).
+✅ Unsubscribe from events when no longer needed (-= handler).
+✅ Avoid raising events in constructors to prevent incomplete object issues.
+
+🔹 Real-World Use Cases
+✔ Button Clicks in UI (WinForms, WPF)
+✔ Data Change Notifications
+✔ File System Changes (e.g., File Watchers)
+✔ Multithreading and Asynchronous Programming (e.g., Task Completion Events) 
+*/
