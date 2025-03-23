@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegates and Events", "Del
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "other key C# concepts", "other key C# concepts\other key C# concepts.csproj", "{A2B08A0D-561C-4C71-9EEB-D07C9368A10C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IEnumerable & IQueryable", "IEnumerable & IQueryable\IEnumerable & IQueryable.csproj", "{AC6E4845-CB5E-4637-86A0-F74F3C8C29BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{A2B08A0D-561C-4C71-9EEB-D07C9368A10C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2B08A0D-561C-4C71-9EEB-D07C9368A10C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2B08A0D-561C-4C71-9EEB-D07C9368A10C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC6E4845-CB5E-4637-86A0-F74F3C8C29BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC6E4845-CB5E-4637-86A0-F74F3C8C29BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC6E4845-CB5E-4637-86A0-F74F3C8C29BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC6E4845-CB5E-4637-86A0-F74F3C8C29BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -2,7 +2,8 @@
 //Console.WriteLine("Hello, World!");
 
 /*
-Generics in C# allow you to define classes, interfaces, and methods with a placeholder (type parameter). This enables code reusability while maintaining type safety. 
+Generics in C# allow you to define classes, interfaces, and methods with a placeholder (type parameter). 
+This enables code reusability while maintaining type safety. 
 
 Why Use Generics?
 
